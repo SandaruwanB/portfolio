@@ -1,14 +1,14 @@
-import { createTheme } from '@mui/material'
+import { colors, createTheme } from '@mui/material'
 
 const LightTheme = createTheme({
   palette : {
     primary : {
-      main : '#2196F3'
+      main : colors.grey[50],
     },
     secondary : {
-      main : 'rgb(255,255,255)'
+      main : colors.grey[100],
     },
-    mode : 'light'
+    mode : 'light',
   }
 })
 
