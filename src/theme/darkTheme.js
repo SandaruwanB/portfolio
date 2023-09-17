@@ -6,7 +6,7 @@ const DarkTheme = createTheme({
       main : '#1976D2',
     },
     secondary : {
-      main : '#FFA000',
+      main : 'rgb(73,75,80)',
     },
     mode : 'dark',
   }

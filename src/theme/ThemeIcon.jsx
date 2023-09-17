@@ -1,15 +1,27 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { ThemeProvider } from '@mui/material'
+import { Box, IconButton, ThemeProvider } from '@mui/material'
+import { Brightness4, Brightness7 } from '@mui/icons-material'
 import DarkTheme from './darkTheme'
 import LightTheme from './lightTheme'
 
+
 const ThemeIcon = () => {
-  const [theme, setTheme] = useState('light');
+  const [themeMod, setThemeMod] = useState('light');
 
   return (
-    <ThemeProvider theme={theme === 'light' ? LightTheme : DarkTheme} >
-        <p style={{position : 'fixed', top : '50%', right : 10}} onClick={()=>setTheme(theme === 'light' ? 'dark' : 'light')}>{theme} mode</p>
+    <ThemeProvider theme={themeMod === 'light' ? LightTheme : DarkTheme} >
+        <Box sx={{
+          position : 'fixed',
+          top : '30%',
+          right : 5,
+          backgroundColor : themeMod === 'light' ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.2)',
+          borderRadius: 5,
+        }}>
+          <IconButton onClick={()=>setThemeMod(themeMod === 'light' ? 'dark' : 'light')}> 
+            {themeMod === 'light' ? <Brightness4 /> : <Brightness7 /> }
+          </IconButton>
+        </Box>
         <Outlet />
     </ThemeProvider>
   )

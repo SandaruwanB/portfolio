@@ -6,7 +6,7 @@ const LightTheme = createTheme({
       main : '#2196F3'
     },
     secondary : {
-      main : '#FFC107'
+      main : 'rgb(255,255,255)'
     },
     mode : 'light'
   }
