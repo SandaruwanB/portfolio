@@ -16,25 +16,40 @@ const Navbar = (props) => {
   const {window} = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const drawerWidth = 250;
+
+  const DrawerContent = ()=>{
+    return (
+      <div>
+        <Toolbar />
+        <List>
+          {navBarValues.map((val,i)=>(
+            <ListItem key={i}>
+              <ListItemButton>
+                <ListItemText primary={val.name}/>
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </div>
+    )
+  }
+
 
   return (
     <>
-      <CssBaseline />
-      <AppBar 
+      <AppBar
         position='fixed'
-        sx={{
-          width : {sm : `calc(100% - 250)`},
-          //display : { lg : 'none' },
-          ml : 250,
-        }}
+        sx={{width : `calc(100% - ${drawerWidth})px`, ml : {sm : `${drawerWidth}px`}, boxShadow : 'none'}}
+        
       >
-        <Toolbar
-
+        <Toolbar 
+          sx={{display : 'flex', justifyContent : 'space-between'}}
         >
-          <Typography>
+          <Typography sx={{letterSpacing : 2}}>
             SANDARU
           </Typography>
-          <IconButton >
+          <IconButton>
             <Menu />
           </IconButton>
         </Toolbar>

@@ -1,15 +1,25 @@
 import { useTheme } from '@mui/material/styles'
 import React from 'react'
 import Navbar from './navbar/Navbar'
+import { Box, CssBaseline } from '@mui/material'
 
 const About = () => {
   const theme = useTheme()
-
+  // <div style={{width : '100%', height : '100vh', background : theme.palette.primary.main}}>
   return (
-    <div style={{width : '100%', height : '100vh', background : theme.palette.secondary.main}}>About 
-      <h6>Primary Color : {theme.palette.primary.main}</h6>
+    <Box
+      sx={{display : 'flex'}}
+    >
+      <CssBaseline />
       <Navbar />
-    </div>
+      <Box
+        sx={{
+          background : theme.palette.primary.main
+        }}
+      >
+
+      </Box>
+    </Box>
   )
 }
 

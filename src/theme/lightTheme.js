@@ -3,10 +3,10 @@ import { colors, createTheme } from '@mui/material'
 const LightTheme = createTheme({
   palette : {
     primary : {
-      main : colors.grey[50],
+      main : '#EDF1F7',
     },
     secondary : {
-      main : colors.grey[100],
+      main : '#F7F9FC',
     },
     mode : 'light',
   }
