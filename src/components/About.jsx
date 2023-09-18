@@ -1,7 +1,7 @@
 import { useTheme } from '@mui/material/styles'
 import React from 'react'
-import Navbar from './navbar/Navbar'
-import { Box, CssBaseline } from '@mui/material'
+import NavBar from './navbar/NavBar'
+import { Box, CssBaseline, Toolbar, Typography } from '@mui/material'
 
 const About = () => {
   const theme = useTheme()
@@ -11,13 +11,17 @@ const About = () => {
       sx={{display : 'flex'}}
     >
       <CssBaseline />
-      <Navbar />
+      <NavBar />
       <Box
+        component={'main'}
         sx={{
-          background : theme.palette.primary.main
+          background : theme.palette.secondary.main
         }}
       >
-
+        <Toolbar />
+        <Typography>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam vitae, hic placeat ipsum quae dicta! Amet beatae, accusamus accusantium nobis ea atque unde voluptatem esse fugit quae, alias tenetur reiciendis?
+        </Typography>
       </Box>
     </Box>
   )
