@@ -12,6 +12,10 @@ const DarkTheme = createTheme({
   },
   typography : {
     body1 : '#fff',
+    fontFamily : [
+      'Roboto',
+      'Arial'
+    ]
   },
   transitions : {
     easing : {

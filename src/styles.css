@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.HomeProfile{
+    object-fit: cover;
+    border-radius: 50%;
+}
