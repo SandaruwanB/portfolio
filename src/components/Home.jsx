@@ -1,10 +1,17 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import { Box, CssBaseline, Grid, Typography, useTheme} from '@mui/material'
 
 const Home = () => {
-  return (
-    <Box sx={{display : 'flex', flexDirection : 'row', width : '100%', height : '100vh'}}>
+  const theme = useTheme();
 
+  return (
+    <Box>
+      <CssBaseline />
+      <Box sx={{background : theme.palette.primary.main, width : '100%', minHeight : '100vh', display : 'flex', justifyContent : 'center', alignItems : 'center' }}>
+        <Typography>
+          Lorem i
+        </Typography>
+      </Box>
     </Box>
   )
 }

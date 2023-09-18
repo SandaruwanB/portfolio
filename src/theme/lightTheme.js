@@ -9,6 +9,9 @@ const LightTheme = createTheme({
       main : '#F7F9FC',
     },
     mode : 'light',
+  },
+  typography : {
+    body1 : '#000'
   }
 })
 

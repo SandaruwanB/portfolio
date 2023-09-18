@@ -10,6 +10,9 @@ const DarkTheme = createTheme({
     },
     mode : 'dark',
   },
+  typography : {
+    body1 : '#fff',
+  },
   transitions : {
     easing : {
       easeInOut : 'cubic-bezier(0.4, 0, 0.2, 1)',

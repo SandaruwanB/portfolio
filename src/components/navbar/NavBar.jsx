@@ -1,17 +1,26 @@
-import { AppBar, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography} from '@mui/material'
-import { Menu } from '@mui/icons-material'
+import { Divider, List, Toolbar } from '@mui/material';
 import React, { useState } from 'react'
 
-const navBarValues = [
-  {
-    name : 'Home'
-  },
-  {
-    name : 'About'
-  }
-]
+const drawerWidth = 400;
+const navBarValues = ['Home', 'About', 'Contact'];
 
 const NavBar = (props) => {
+  const {window} = props;
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = ()=>{
+    setMobileOpen(!mobileOpen);
+  }
+
+  const drawer = (
+    <div>
+      <Toolbar />
+      <Divider />
+      <List>
+        
+      </List>
+    </div>
+  )
 
   return (
     <>
