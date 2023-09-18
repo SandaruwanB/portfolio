@@ -1,8 +1,8 @@
-import { AppBar, Box, Divider, Drawer, IconButton, List, Toolbar, Typography, useTheme } from '@mui/material';
+import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography, useTheme } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 import React, { useState } from 'react'
 
-const drawerWidth = 600;
+const drawerWidth = 450;
 const navBarValues = ['Home', 'About', 'Contact'];
 
 const NavBar = (props) => {
@@ -16,9 +16,15 @@ const NavBar = (props) => {
 
   const drawer = (
     <div>
-      <Typography>
-        asdkhasjd
-      </Typography>
+      <List>
+        {navBarValues.map((value,index)=>(
+          <ListItem key={index}>
+            <ListItemButton>
+              <ListItemText primary={value}/>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
     </div>
   )
 
@@ -40,7 +46,12 @@ const NavBar = (props) => {
           <Typography sx={{letterSpacing : 2}}>
             SANDARU
           </Typography>
-          <IconButton>
+          <IconButton
+            color='inherit'
+            aria-label='open drawer'
+            edge={'start'}
+            onClick={handleDrawerToggle}
+          >
             <Menu />
           </IconButton>
         </Toolbar>
