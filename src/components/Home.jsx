@@ -14,15 +14,16 @@ const Home = () => {
         sx={{flexGrow : 1, width : {sm : 'calc(100% - 600px)'}, height : '100vh', background : theme.palette.primary.main}}
       >
         <Grid container sx={{width : '100%', height : '100%'}} direction={'row'} justifyContent={'center'} alignItems={'center'}>
-          <Grid item xs={12} sm={12} md={5} lg={5} sx={{display : 'flex', justifyContent : 'right', alignItems : 'center'}}>
-            <img src='/profile.jpg' alt='bg' width={280} height={280} className='HomeProfile'/>
+          <Grid item xs={12} sm={12} md={5} lg={5} sx={{display : 'flex', justifyContent : {sm : 'center', md : 'right'}, alignItems : 'flex-end' }}>
+            <div className='HomeProfile'>
+            </div>
           </Grid>
           <Grid item xs={12} sm={12} md={7} lg={7}>
-            <Box pl={5}>
-              <Typography variant='h4'>
+            <Box sx={{ml : {md : 4, lg : 4}}}>
+              <Typography variant='h4' sx={{ textAlign : {xs : 'center', md : 'left'}}}>
                 SANDARUWAN BANDARA
               </Typography>
-              <Typography sx={{width : '70%', pt : 3}} variant='body2'>
+              <Typography sx={{width : { sm : '100%', md : '70%'}, pt : 3, textAlign : {xs : 'center', sm : 'center', md : 'left'}}} variant='body2'>
                 I'm fullstack web developer with 2+ years of experiences. I have create freatures that are the best suited for your web app
               </Typography>
             </Box>

@@ -12,10 +12,6 @@ const LightTheme = createTheme({
   },
   typography : {
     body1 : '#000',
-    fontFamily : [
-      'Roboto',
-      'Arial'
-    ]
   }
 })
 

@@ -3,19 +3,15 @@ import { createTheme } from '@mui/material'
 const DarkTheme = createTheme({
   palette : {
     primary : {
-      main : '#101426',
+      main : '#383838',
     },
     secondary : {
-      main : '#1A2138',
+      main : 'rgb(73,75,80)',
     },
     mode : 'dark',
   },
   typography : {
     body1 : '#fff',
-    fontFamily : [
-      'Roboto',
-      'Arial'
-    ]
   },
   transitions : {
     easing : {

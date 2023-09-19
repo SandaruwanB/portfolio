@@ -52,13 +52,15 @@ const NavBar = (props) => {
             edge={'start'}
             onClick={handleDrawerToggle}
           >
+            
             <Menu />
+
           </IconButton>
         </Toolbar>
       </AppBar>
       <Box
         component={'nav'}
-        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : 'flex', justifyContent : 'center', pl : 13, flexDirection : 'column'}}
+        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, justifyContent : 'center', pl : 13, flexDirection : 'column'}}
         aria-label='navbar items'
       >
         <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3}}>
