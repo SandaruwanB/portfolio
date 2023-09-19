@@ -1,9 +1,9 @@
 import { AppBar, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography, useTheme,} from '@mui/material';
-import { Menu, Copyright, ArrowRight } from '@mui/icons-material';
+import { Menu, Copyright } from '@mui/icons-material';
 import React, { useState } from 'react'
 
 const drawerWidth = 450;
-const navBarValues = ['Home','About','Contact'];
+const navBarValues = ['Home','About','Services','Contact'];
 
 const NavBar = (props) => {
   const {window} = props;
@@ -68,8 +68,8 @@ const NavBar = (props) => {
         </Typography>
         <Box sx={{display : 'block', pt : 5}}>
           {navBarValues.map((value, id)=>(
-            <Typography variant='body1' key={id} sx={{pt : 1, pb : 1}}>
-              <ArrowRight fontSize='40'/> {value} 
+            <Typography variant='body1' key={id}>
+              {value} 
             </Typography>
           ))}
         </Box>
