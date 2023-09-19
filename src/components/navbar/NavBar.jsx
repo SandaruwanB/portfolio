@@ -84,7 +84,7 @@ const NavBar = (props) => {
       </AppBar>
       <Box
         component={'nav'}
-        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, justifyContent : 'center', pl : 13, flexDirection : 'column', borderRight : `1px solid ${theme.palette.primary.dark}`}}
+        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, maxHeight : '100vh', justifyContent : 'center', pl : 13, flexDirection : 'column', borderRight : `1px solid ${theme.palette.primary.dark}`}}
         aria-label='navbar items'
       >
         <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3, fontSize : '2rem'}} className='textMain'>
