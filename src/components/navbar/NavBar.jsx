@@ -36,7 +36,7 @@ const NavBar = (props) => {
   const drawer = (
     <div style={{background : theme.palette.secondary.main, height : '100%'}}>
       <Box sx={{width : '100%', display : 'flex', justifyContent : 'right'}}>
-        <IconButton sx={{p : 2}} onClick={()=>setMobileOpen(!mobileOpen)}>
+        <IconButton sx={{p : 2}} onClick={()=>handleDrawerToggle()}>
           <Close />
         </IconButton>
       </Box>
@@ -84,7 +84,7 @@ const NavBar = (props) => {
       </AppBar>
       <Box
         component={'nav'}
-        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, justifyContent : 'center', pl : 13, flexDirection : 'column'}}
+        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, justifyContent : 'center', pl : 13, flexDirection : 'column', borderRight : `1px solid ${theme.palette.primary.dark}`}}
         aria-label='navbar items'
       >
         <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3, fontSize : '2rem'}} className='textMain'>
