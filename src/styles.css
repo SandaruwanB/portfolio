@@ -6,7 +6,6 @@
 
 .HomeProfile{
     background: url('/public/profile.jpg');
-    filter: grayscale(100%);
     width: 280px;
     height: 280px;
     background-size: cover;
