@@ -1,26 +1,50 @@
 import { AppBar, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography, useTheme,} from '@mui/material';
-import { Menu, Copyright } from '@mui/icons-material';
+import { Menu, Copyright, Close } from '@mui/icons-material';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 450;
-const navBarValues = ['Home','About','Services','Contact'];
+const navBarValues = [
+  { 
+    name : 'Home',
+    url : '/'
+  },
+  {
+    name : 'About',
+    url : '/about'
+  },
+  {
+    name : 'Services',
+    url : '/services'
+  },
+  {
+    name : 'Contact',
+    url : '/contact'
+  }
+];
 
 const NavBar = (props) => {
   const {window} = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
+  const navigate = useNavigate();
 
   const handleDrawerToggle = ()=>{
     setMobileOpen(!mobileOpen);
   }
 
   const drawer = (
-    <div>
+    <div style={{background : theme.palette.secondary.main, height : '100%'}}>
+      <Box sx={{width : '100%', display : 'flex', justifyContent : 'right'}}>
+        <IconButton sx={{p : 2}} onClick={()=>setMobileOpen(!mobileOpen)}>
+          <Close />
+        </IconButton>
+      </Box>
       <List>
         {navBarValues.map((value,index)=>(
           <ListItem key={index}>
             <ListItemButton>
-              <ListItemText primary={value}/>
+              <ListItemText primary={value.name} onClick={()=>navigate(value.url)}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -68,13 +92,13 @@ const NavBar = (props) => {
         </Typography>
         <Box sx={{display : 'block', pt : 5}}>
           {navBarValues.map((value, id)=>(
-            <Typography variant='body1' sx={{mt : 1, mb : 1}} key={id}>
-              {value} 
+            <Typography variant='body1' sx={{mt : 1, mb : 1}} key={id} className='textPrimary'>
+              {value.name} 
             </Typography>
           ))}
         </Box>
         <Box sx={{mt : 10}}>
-          <Typography variant='body2'>
+          <Typography variant='body2' className='textPrimary'>
           <Copyright fontSize='20'/> 2023 SANDARU
           </Typography>
           <Typography variant='body2' className='textSecondry'>
