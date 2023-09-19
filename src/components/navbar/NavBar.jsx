@@ -63,12 +63,12 @@ const NavBar = (props) => {
         sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, justifyContent : 'center', pl : 13, flexDirection : 'column'}}
         aria-label='navbar items'
       >
-        <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3}}>
+        <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3, fontSize : '2rem'}} className='textMain'>
           SANDARU
         </Typography>
         <Box sx={{display : 'block', pt : 5}}>
           {navBarValues.map((value, id)=>(
-            <Typography variant='body1' key={id}>
+            <Typography variant='body1' sx={{mt : 1, mb : 1}} key={id}>
               {value} 
             </Typography>
           ))}
@@ -77,7 +77,7 @@ const NavBar = (props) => {
           <Typography variant='body2'>
           <Copyright fontSize='20'/> 2023 SANDARU
           </Typography>
-          <Typography variant='body2'>
+          <Typography variant='body2' className='textSecondry'>
             Created by SandaruwanBandara
           </Typography>
         </Box>

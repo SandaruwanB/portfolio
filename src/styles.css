@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Mooli&family=Roboto:wght@900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.textMain{
+    font-family: 'Inter', sans-serif;
+}
+
+.textSecondry{
+    font-family: 'Mooli', sans-serif;
 }
 
 .HomeProfile{
