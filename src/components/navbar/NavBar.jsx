@@ -50,7 +50,7 @@ const NavBar = (props) => {
         {navBarValues.map((value,index)=>(
           <ListItem key={index}>
             <ListItemButton>
-              <ListItemText primary={value.name} onClick={()=>navigate(value.url)} sx={{color : value.url === current ? theme.components.MuiListItemText : ""}}/>
+              <ListItemText primary={value.name} onClick={()=>navigate(value.url)} sx={{color : value.url === current ? theme.components.MuiListItemText : theme.components.MuiListItem}}/>
             </ListItemButton>
           </ListItem>
         ))}
