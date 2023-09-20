@@ -16,7 +16,8 @@ const LightTheme = createTheme({
   },
   components : {
     MuiListItemText : '#000000',
-    MuiListItem : '#767676'
+    MuiListItem : '#767676',
+    MuiBadge : 'rgba(143, 155, 179, 0.40)',
   }
 })
 

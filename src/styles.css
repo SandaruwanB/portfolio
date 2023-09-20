@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 .textMain{
     font-family: 'Inter', sans-serif;
 }
