@@ -89,20 +89,20 @@ const NavBar = (props) => {
         sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, minHeight : '100vh', justifyContent : 'center', pl : 13, flexDirection : 'column', borderRight : `1px solid ${theme.palette.primary.dark}`, position : 'fixed'}}
         aria-label='navbar items'
       >
-        <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3, fontSize : '2rem'}} className='textMain'>
+        <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 5, fontSize : '2.2rem', color : theme.components.MuiListItemText}} className='textMain'>
           SANDARU
         </Typography>
         <Box sx={{display : 'block', pt : 5}}>
           {navBarValues.map((value, id)=>(
             <div onClick={()=>navigate(value.url)} style={{cursor : 'pointer'}} key={id}>
-              <Typography variant='body1' sx={{mt : 1, mb : 1, color : value.url === current ? theme.components.MuiListItemText : ""}} className='textPrimary'>
+              <Typography variant='body1' sx={{fontWeight : 600,mt : 1, mb : 1, color : value.url === current ? theme.components.MuiListItemText : theme.components.MuiListItem}} className='textPrimary'>
               {value.name} 
               </Typography>
             </div>
           ))}
         </Box>
         <Box sx={{mt : 10}}>
-          <Typography variant='body2' className='textPrimary'>
+          <Typography variant='body2' className='textPrimary' sx={{color : theme.components.MuiListItem}}>
           <Copyright fontSize='20'/> 2023 SANDARU
           </Typography>
           <Typography variant='body2' className='textSecondry'>

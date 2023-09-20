@@ -26,8 +26,8 @@ const Home = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={7} lg={7}>
               <Box sx={{ml : {md : 10, lg : 10}}}>
-                <Typography variant='h4' sx={{ textAlign : {xs : 'center', md : 'left', fontSize: {xs : '1.5rem' , sm : '3rem'}, fontWeight : 'bold'}}} className='textMain'>
-                  SANDARUWAN BANDARA
+                <Typography variant='h4' sx={{ textAlign : {xs : 'center', md : 'left', fontWeight : '900', letterSpacing : 1}}} >
+                  <p className='name textMain'>SANDARUWAN BANDARA</p>
                 </Typography>
                 <Typography sx={{width : { sm : '100%', md : '80%'}, mt : 5, textAlign : {xs : 'center', sm : 'center', md : 'left'}, letterSpacing : 0.5}} variant='body1' className='textSecondry'>
                   I'm fullstack developer with 2+ years of experiences. I have create freatures that are the best suited for your web apps and android apps.I'm also develop desktop apps & APIs.

@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material'
 const DarkTheme = createTheme({
   palette : {
     primary : {
-      main : '#383838',
+      main : '#34353a',
     },
     secondary : {
       main : 'rgb(73,75,80)',
@@ -14,7 +14,8 @@ const DarkTheme = createTheme({
     body1 : '#fff',
   },
   components : {
-    MuiListItemText : 'red'
+    MuiListItemText : '#FFFFFF',
+    MuiListItem : '#BBBBBB',
   },
   transitions : {
     easing : {
