@@ -1,7 +1,7 @@
 import { AppBar, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography, useTheme,} from '@mui/material';
-import { Menu, Copyright, Close } from '@mui/icons-material';
+import { Menu, Copyright, MenuOpen } from '@mui/icons-material';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const drawerWidth = 450;
 const navBarValues = [
@@ -25,6 +25,8 @@ const navBarValues = [
 
 const NavBar = (props) => {
   const {window} = props;
+  const location = useLocation();
+  const current = location.pathname;
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
   const navigate = useNavigate();
@@ -37,14 +39,14 @@ const NavBar = (props) => {
     <div style={{background : theme.palette.secondary.main, height : '100%'}}>
       <Box sx={{width : '100%', display : 'flex', justifyContent : 'right'}}>
         <IconButton sx={{p : 2}} onClick={()=>handleDrawerToggle()}>
-          <Close />
+          <MenuOpen />
         </IconButton>
       </Box>
       <List>
         {navBarValues.map((value,index)=>(
           <ListItem key={index}>
             <ListItemButton>
-              <ListItemText primary={value.name} onClick={()=>navigate(value.url)}/>
+              <ListItemText primary={value.name} onClick={()=>navigate(value.url)} sx={{color : value.url === current ? theme.components.MuiListItemText : ""}}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -84,7 +86,7 @@ const NavBar = (props) => {
       </AppBar>
       <Box
         component={'nav'}
-        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, maxHeight : '100vh', justifyContent : 'center', pl : 13, flexDirection : 'column', borderRight : `1px solid ${theme.palette.primary.dark}`}}
+        sx={{width : {lg : drawerWidth}, flexShrink : {sm : 0}, background : theme.palette.secondary.main, display : {xs : 'none',sm : 'none', md : 'none', lg : 'flex'}, minHeight : '100vh', justifyContent : 'center', pl : 13, flexDirection : 'column', borderRight : `1px solid ${theme.palette.primary.dark}`, position : 'fixed'}}
         aria-label='navbar items'
       >
         <Typography variant='h5' sx={{fontWeight : '900', letterSpacing : 3, fontSize : '2rem'}} className='textMain'>
@@ -92,9 +94,11 @@ const NavBar = (props) => {
         </Typography>
         <Box sx={{display : 'block', pt : 5}}>
           {navBarValues.map((value, id)=>(
-            <Typography variant='body1' sx={{mt : 1, mb : 1}} key={id} className='textPrimary'>
+            <div onClick={()=>navigate(value.url)} style={{cursor : 'pointer'}} key={id}>
+              <Typography variant='body1' sx={{mt : 1, mb : 1, color : value.url === current ? theme.components.MuiListItemText : ""}} className='textPrimary'>
               {value.name} 
-            </Typography>
+              </Typography>
+            </div>
           ))}
         </Box>
         <Box sx={{mt : 10}}>

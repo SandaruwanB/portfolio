@@ -13,6 +13,9 @@ const LightTheme = createTheme({
   },
   typography : {
     body1 : '#000',
+  },
+  components : {
+    MuiListItemText : 'yellow'
   }
 })
 

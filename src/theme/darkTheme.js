@@ -13,6 +13,9 @@ const DarkTheme = createTheme({
   typography : {
     body1 : '#fff',
   },
+  components : {
+    MuiListItemText : 'red'
+  },
   transitions : {
     easing : {
       easeInOut : 'cubic-bezier(0.4, 0, 0.2, 1)',

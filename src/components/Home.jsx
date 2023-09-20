@@ -13,10 +13,10 @@ const Home = () => {
   return (
     <Box sx={{display : 'flex',}}>
       <CssBaseline />
-      <NavBar />
+      <NavBar/>
       <Box
         component={'main'}
-        sx={{flexGrow : 1, width : {sm : 'calc(100% - 600px)'}, height : '100vh', background : theme.palette.primary.main}}
+        sx={{flexGrow : 1, width : {sm : 'calc(100% - 450px)'}, height : '100vh', background : theme.palette.primary.main}}
       >
         <Grid container sx={{width : '100%', height : '100%'}} direction={'row'} justifyContent={'center'} alignItems={'center'}>
           <Grid item xs={12} sm={12} md={5} lg={5} sx={{display : 'flex', justifyContent : {xs : 'center', sm : 'center', md : 'right'}, alignItems : {xs : 'end'}}}>
