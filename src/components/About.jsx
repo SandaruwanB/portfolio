@@ -4,13 +4,14 @@ import NavBar from './navbar/NavBar'
 import { Box, Container, CssBaseline, Typography, Divider, Grid } from '@mui/material'
 
 const About = () => {
-  const theme = useTheme()
+  const theme = useTheme();
+  
 
   return (
-    <Box sx={{display : 'flex',}}>
+    <Box>
       <CssBaseline />
       <NavBar />
-      <Box sx={{display : 'flex'}}>
+      <Box sx={{display : 'flex', pb : 10}}>
         <Box
           component={'main'}
           sx={{flexGrow : 1, minHeight : '100vh', width : '100%', pl : { md : '0', sm : '0', lg : '450px' }}}
