@@ -4,6 +4,7 @@ const DarkTheme = createTheme({
   palette : {
     primary : {
       main : '#34353a',
+      dark : 'rgba(128, 128, 128, 1)',
     },
     secondary : {
       main : 'rgb(73,75,80)',
