@@ -10,6 +10,14 @@
     font-family: 'Poppins';
     src: url('/public/fonts/Poppins-Light.ttf');
 }
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/public/fonts/Montserrat-Black.ttf');
+}
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url('/public/fonts/Montserrat-Medium.ttf');
+}
 
 
 *{
@@ -23,15 +31,15 @@ body::-webkit-scrollbar{
 }
 
 .textMain{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .textSecondry{
-    font-family: 'Mooli', sans-serif;
+    font-family: 'MontserratMedium', sans-serif;
 }
 
 .textPrimary{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Mooli', sans-serif;
 }
 
 .name {

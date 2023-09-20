@@ -25,7 +25,7 @@ const About = () => {
                   About
                 </Typography>
               </Box>
-              <Typography sx={{mt : 1, fontSize : '2rem', fontWeight : 'bold', letterSpacing : 2}} className='textSecondry'>
+              <Typography sx={{mt : 1, fontSize : '2rem', fontWeight : 'bold', letterSpacing : 2}} className='textPrimary'>
                 About Me
               </Typography>
               <Box sx={{mt : 6}}>

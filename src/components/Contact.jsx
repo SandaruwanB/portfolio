@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, CssBaseline, Container, useTheme} from '@mui/material'
+import {Box, CssBaseline, Container, useTheme, Typography, Grow} from '@mui/material'
 import NavBar from './navbar/NavBar'
 
 
@@ -15,9 +15,19 @@ const Contact = () => {
           component={'main'}
           sx={{flexGrow : 1, minHeight : '100vh', width : '100%', pl : { md : '0', sm : '0', lg : '450px' }}}
         >
-          <Box sx={{height : '100%', width : '100%', background : theme.palette.primary.main, pt : 15}}>
-            <Container maxWidth="lg" sx={{width : {xl : '70%'}}}>
-            </Container>
+          <Box sx={{height : '100%', width : '100%', background : theme.palette.primary.main, pt : 10, pb : 10}}>
+            <Grow in={true}>
+              <Container maxWidth="lg" sx={{width : {xl : '70%'}}}>                
+                <Box sx={{display : 'block' }}>                
+                  <Typography sx={{pl : 3, pr : 3, pt : 1, pb : 1, background : theme.components.MuiBadge, display : 'inline-block', fontSize : '0.8rem', fontWeight : 'bold'}}>
+                    Contact
+                  </Typography>
+                </Box>
+                <Typography sx={{mt : 1, letterSpacing : 2, fontSize : '2rem', fontWeight : 'bold'}} className='textSecondry'>
+                  Contact Me
+                </Typography>
+              </Container>
+            </Grow>
           </Box>
         </Box>
       </Box>

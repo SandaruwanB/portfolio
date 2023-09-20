@@ -95,17 +95,17 @@ const NavBar = (props) => {
         <Box sx={{display : 'block', pt : 5}}>
           {navBarValues.map((value, id)=>(
             <div onClick={()=>navigate(value.url)} style={{cursor : 'pointer'}} key={id}>
-              <Typography variant='body1' sx={{fontWeight : 600,mt : 1, mb : 1, color : value.url === current ? theme.components.MuiListItemText : theme.components.MuiListItem}} className='textPrimary'>
+              <Typography variant='body1' sx={{fontWeight : 400,mt : 1, mb : 1, color : value.url === current ? theme.components.MuiListItemText : theme.components.MuiListItem}} className='textSecondry'>
               {value.name} 
               </Typography>
             </div>
           ))}
         </Box>
         <Box sx={{mt : 10}}>
-          <Typography variant='body2' className='textPrimary' sx={{color : theme.components.MuiListItem}}>
+          <Typography variant='body2' className='textSecondry' sx={{color : theme.components.MuiListItem}}>
           <Copyright fontSize='20'/> 2023 SANDARU
           </Typography>
-          <Typography variant='body2' className='textSecondry'>
+          <Typography variant='body2' className='textSecondry' sx={{color : theme.components.MuiListItem}}>
             Created by SandaruwanBandara
           </Typography>
         </Box>

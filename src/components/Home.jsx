@@ -30,7 +30,7 @@ const Home = () => {
                     <Typography variant='h4' sx={{ textAlign : {xs : 'center', md : 'left', fontWeight : '900', letterSpacing : 1}}} >
                       <p className='name textMain'>SANDARUWAN BANDARA</p>
                     </Typography>
-                    <Typography sx={{width : { sm : '100%', md : '80%'}, mt : 5, textAlign : {xs : 'center', sm : 'center', md : 'left'}, letterSpacing : 0.5}} variant='body1' className='textSecondry'>
+                    <Typography sx={{width : { sm : '100%', md : '80%'}, mt : 5, textAlign : {xs : 'center', sm : 'center', md : 'left'}, letterSpacing : 0.5}} variant='body1' className='textPrimary'>
                       I'm fullstack developer with 2+ years of experiences. I have create freatures that are the best suited for your web apps and android apps.I'm also develop desktop apps & APIs.
                     </Typography>
                     <Typography sx={{textAlign : {xs : 'center', sm : 'center', md : 'left'}, mt : 3}}>
