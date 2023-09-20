@@ -18,6 +18,8 @@ const DarkTheme = createTheme({
     MuiListItemText : '#FFFFFF',
     MuiListItem : '#BBBBBB',
     MuiBadge : 'rgba(0,0,0,0.40)',
+    MuiButton : '#FFFFFF',
+    MuiFormHelperText : '#000'
   },
 })
 

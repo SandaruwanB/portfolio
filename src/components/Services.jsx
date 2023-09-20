@@ -206,7 +206,7 @@ const Services = () => {
                           </Box>
                           <Divider />
                           <Box sx={{display : 'flex', justifyContent : 'center', mt : 2}}>
-                            <Button variant='contained'>Select</Button>
+                            <Button variant='contained' sx={{background : theme.components.MuiButton, boxShadow : 'none', color : theme.components.MuiFormHelperText}}>Select</Button>
                           </Box>
                         </Box>
                       </Grid>
@@ -281,7 +281,7 @@ const Services = () => {
                           </Box>
                           <Divider />
                           <Box sx={{display : 'flex', justifyContent : 'center', mt : 2}}>
-                            <Button variant='contained'>Select</Button>
+                            <Button variant='contained' sx={{background : theme.components.MuiButton, boxShadow : 'none', color : theme.components.MuiFormHelperText}}>Select</Button>
                           </Box>
                         </Box>
                       </Grid>
@@ -356,7 +356,7 @@ const Services = () => {
                           </Box>
                           <Divider />
                           <Box sx={{display : 'flex', justifyContent : 'center', mt : 2}}>
-                            <Button variant='contained'>Select</Button>
+                            <Button variant='contained' sx={{background : theme.components.MuiButton, boxShadow : 'none', color : theme.components.MuiFormHelperText}}>Select</Button>
                           </Box>
                         </Box>
                       </Grid>
