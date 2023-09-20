@@ -14,6 +14,10 @@ const navBarValues = [
     url : '/about'
   },
   {
+    name : 'Technologies & Projects',
+    url : '/tech'
+  },
+  {
     name : 'Services',
     url : '/services'
   },

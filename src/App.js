@@ -8,6 +8,7 @@ import About from './components/About'
 import ThemeIcon from './theme/ThemeIcon'
 import Contact from './components/Contact'
 import Services from './components/Services'
+import Tech from "./components/Tech";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/tech" element={<Tech />} />
           </Route>
         </Routes> 
       </BrowserRouter>
