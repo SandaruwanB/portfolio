@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Box, IconButton, ThemeProvider } from '@mui/material'
 import { Brightness4, Brightness7 } from '@mui/icons-material'
@@ -8,6 +8,15 @@ import LightTheme from './lightTheme'
 
 const ThemeIcon = () => {
   const [themeMod, setThemeMod] = useState('light');
+
+  useEffect(()=>{
+    if(window.matchMedia('(prefers-color-scheme : dark)')){
+      setThemeMod('dark');
+    } 
+    else{
+      setThemeMod('light');
+    }
+  },[setThemeMod]);
 
   return (
     <ThemeProvider theme={themeMod === 'light' ? LightTheme : DarkTheme} >

@@ -49,7 +49,7 @@ const Services = () => {
           component={'main'}
           sx={{flexGrow : 1, minHeight : '100vh', width : '100%', pl : { md : '0', sm : '0', lg : '450px' }}}
         >
-          <Box sx={{width : '100%', background : theme.palette.primary.main, pt : 10, pb : 8}}>
+          <Box sx={{width : '100%', background : theme.palette.primary.main, pt : 10, pb : 10}}>
             <Grow in={true}>
               <Container maxWidth="lg" sx={{width : {xl : '70%'}}}>
                 <Box sx={{display : 'block' }}>                
@@ -87,9 +87,9 @@ const Services = () => {
               </Container>
             </Grow>
           </Box>
-          <Box sx={{width : '100%', background : theme.palette.secondary.main, pb : 5}}>
+          <Box sx={{width : '100%', background : theme.palette.secondary.main, pb : 10, pt : 10}}>
             <Container maxWidth="lg" sx={{width : {xl : '70%'}}}>
-              <Box sx={{pt : 5, pb : 5}}>
+              <Box>
                   <Typography sx={{fontSize : '1.2rem', fontWeight : 600, letterSpacing : 1}} className='textPrimary'>
                     Fun Facts
                   </Typography>
@@ -130,7 +130,7 @@ const Services = () => {
           </Box>
           <Box sx={{width : '100%', background : theme.palette.primary.main}}>
             <Container maxWidth="lg" sx={{width : {xl : '70%'}}}>
-                <Box sx={{pt : 5, pb : 5}}>
+                <Box sx={{pt : 10, pb : 10}}>
                     <Typography sx={{fontSize : '1.2rem', fontWeight : 600, letterSpacing : 1}} className='textPrimary'>
                       Packages & Pricing
                     </Typography>

@@ -1,7 +1,7 @@
 import { useTheme } from '@mui/material/styles'
 import React from 'react'
 import NavBar from './navbar/NavBar'
-import { Box, Container, CssBaseline, Typography, Divider, Grid, Grow } from '@mui/material'
+import { Box, Container, CssBaseline, Typography, Divider, Grow, Grid, Button } from '@mui/material'
 
 const About = () => {
   const theme = useTheme();
@@ -16,7 +16,7 @@ const About = () => {
           component={'main'}
           sx={{flexGrow : 1, minHeight : '100vh', width : '100%', pl : { md : '0', sm : '0', lg : '450px' }}}
         >
-          <Box sx={{height : '100%', width : '100%', background : theme.palette.primary.main, pt : 10, pb : 10}}>
+          <Box sx={{ width : '100%', background : theme.palette.primary.main, pt : 10, pb : 10}}>
             <Grow in={true}>
             <Container maxWidth="lg" sx={{width : {xl : '70%'}}}>
               <Box sx={{display : 'block' }}>
@@ -47,17 +47,97 @@ const About = () => {
               One of my specialties is taking an idea from scratch and creating a full-fledged platform. I go beyond to produce sites with a unique, outstanding, contemporary look-and-feel. With extensive knowledge of web mechanics, I’m able to optimize complex integrations to require little-to-no maintenance while running on their own for years.
               </Typography>
               <Divider sx={{mt : 5, mb : 5}}/>
-              <Box>
-                <Grid container spacing={3}>
-                  <Grid item md={6} sm={12} xs={12}>
-
-                  </Grid>
-                  <Grid item md={6} sm={12} xs={12}>
-                  </Grid>
-                </Grid>
-              </Box>
+              <a
+                href='/cv/cv.pdf'
+                download={'SandaruwanBandara'}
+                target='_blank'
+                rel='noreferrer'
+              >
+                <Button variant='contained' sx={{background : theme.components.MuiButton, boxShadow : 'none', color : theme.components.MuiFormHelperText}}>Download CV</Button>
+              </a>
             </Container>
             </Grow>
+          </Box>
+          <Box sx={{pt : 10, pb : 10, background : theme.palette.secondary.main}}>
+            <Container maxWidth="lg"  sx={{width : {xl : '70%'}}}>
+              <Grid container spacing={6}>
+                <Grid item sm={12} xs={12} md={6} lg={6} xl={6}>
+                  <Box>
+                    <Typography sx={{color : theme.components.MuiListItemText, fontSize : '1.2rem', letterSpacing : 1, fontWeight : 600}} className='textPrimary'>
+                      Skills
+                    </Typography>
+                    <Box sx={{mt : 5}}>
+                      <Box sx={{width : '100%', display : 'flex', justifyContent : 'space-between', fontSize : '.8rem'}}>
+                        <Typography className='textSecondry'>Programming</Typography>
+                        <Typography className='textSecondry'>95%</Typography>
+                      </Box>
+                      <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, background : theme.palette.primary.dark, mt : 0.5}}>
+                        <Box sx={{width : '95%', background : theme.components.MuiListItemText, height : 3}}></Box>
+                      </Box>
+                    </Box>
+                    <Box sx={{mt : 3}}>
+                      <Box sx={{width : '100%', display : 'flex', justifyContent : 'space-between', fontSize : '.8rem'}}>
+                        <Typography className='textSecondry'>Team Leading</Typography>
+                        <Typography className='textSecondry'>85%</Typography>
+                      </Box>
+                      <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, background : theme.palette.primary.dark, mt : 0.5}}>
+                        <Box sx={{width : '85%', background : theme.components.MuiListItemText, height : 3}}></Box>
+                      </Box>
+                    </Box>
+                    <Box sx={{mt : 3}}>
+                      <Box sx={{width : '100%', display : 'flex', justifyContent : 'space-between', fontSize : '.8rem'}}>
+                        <Typography className='textSecondry'>Content Writing</Typography>
+                        <Typography className='textSecondry'>65%</Typography>
+                      </Box>
+                      <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, background : theme.palette.primary.dark, mt : 0.5}}>
+                        <Box sx={{width : '65%', background : theme.components.MuiListItemText, height : 3}}></Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Grid>
+                <Grid item sm={12} xs={12} md={6} lg={6} xl={6}>
+                  <Box>
+                    <Typography sx={{color : theme.components.MuiListItemText, fontSize : '1.2rem', letterSpacing : 1, fontWeight : 600}} className='textPrimary'>
+                      Language Skills
+                    </Typography>
+                    <Box sx={{mt : 5}}>
+                      <Box sx={{width : '100%', display : 'flex', justifyContent : 'space-between', fontSize : '.8rem'}}>
+                        <Typography className='textSecondry'>English</Typography>
+                        <Typography className='textSecondry'>80%</Typography>
+                      </Box>
+                      <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, background : theme.palette.primary.dark, mt : 0.5}}>
+                        <Box sx={{width : '80%', background : theme.components.MuiListItemText, height : 3}}></Box>
+                      </Box>
+                    </Box>
+                    <Box sx={{mt : 3}}>
+                      <Box sx={{width : '100%', display : 'flex', justifyContent : 'space-between', fontSize : '.8rem'}}>
+                        <Typography className='textSecondry'>Sinhala</Typography>
+                        <Typography className='textSecondry'>90%</Typography>
+                      </Box>
+                      <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, background : theme.palette.primary.dark, mt : 0.5}}>
+                        <Box sx={{width : '90%', background : theme.components.MuiListItemText, height : 3}}></Box>
+                      </Box>
+                    </Box>
+                    <Box sx={{mt : 3}}>
+                      <Box sx={{width : '100%', display : 'flex', justifyContent : 'space-between', fontSize : '.8rem'}}>
+                        <Typography className='textSecondry'>Tamil</Typography>
+                        <Typography className='textSecondry'>55%</Typography>
+                      </Box>
+                      <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, background : theme.palette.primary.dark, mt : 0.5}}>
+                        <Box sx={{width : '55%', background : theme.components.MuiListItemText, height : 3}}></Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Container>
+          </Box>
+          <Box sx={{pt : 10, pb : 10, background : theme.palette.primary.main}}>
+            <Container maxWidth="lg"  sx={{width : {xl : '70%'}}}>
+              <Typography sx={{color : theme.components.MuiListItemText, fontSize : '1.2rem', letterSpacing : 1, fontWeight : 600}} className='textPrimary'>
+                Testimonials
+              </Typography>
+            </Container>
           </Box>
         </Box>    
       </Box>
