@@ -97,7 +97,7 @@ const Services = () => {
                     <Grid item lg={4} md={4} sm={12} xs={12}>
                       <Box sx={{border : `1px solid ${theme.palette.primary.dark}`, background : 'transparent', p : 5, textAlign : 'center'}}>
                         <Typography sx={{fontSize : '1.5rem'}} className='textPrimary'>
-                          20+
+                          15+
                         </Typography>
                         <Typography sx={{color : theme.components.MuiListItem, fontSize : '0.8rem'}} className='textSecondry'>
                           GitHub Repositories
@@ -117,7 +117,7 @@ const Services = () => {
                     <Grid item lg={4} md={4} sm={12} xs={12}>
                       <Box sx={{border : `1px solid ${theme.palette.primary.dark}`, background : 'transparent', p : 5, textAlign : 'center'}}>
                         <Typography sx={{fontSize : '1.5rem'}} className='textPrimary'>
-                          1k+
+                          2k+
                         </Typography>
                         <Typography sx={{color : theme.components.MuiListItem, fontSize : '0.8rem'}} className='textSecondry'>
                           Lines of Codes
@@ -135,7 +135,7 @@ const Services = () => {
                       Packages & Pricing
                     </Typography>
                     <Grid container spacing={4} sx={{mt : 2}}>
-                      <Grid item lg={4}>
+                      <Grid item lg={4} md={4} sm={6} xs={12}>
                         <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, p : 3}}>
                           <Typography sx={{fontSize : '3rem'}}>
                             100<span style={{fontSize : '1.5rem'}}>$</span>
@@ -146,7 +146,7 @@ const Services = () => {
                           <Divider />
                           <Box sx={{display : 'flex', justifyContent : 'space-between', mt : 2}}>
                             <Typography sx={{fontSize : '0.7rem'}} className='textSecondry'>
-                              Functional Website
+                              Functional App
                             </Typography>
                             <CheckCircle fontSize='1'/>
                           </Box>
@@ -210,7 +210,7 @@ const Services = () => {
                           </Box>
                         </Box>
                       </Grid>
-                      <Grid item lg={4}>
+                      <Grid item lg={4} md={4} sm={6} xs={12}>
                         <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, p : 3}}>
                           <Typography sx={{fontSize : '3rem'}}>
                             250<span style={{fontSize : '1.5rem'}}>$</span>
@@ -221,7 +221,7 @@ const Services = () => {
                           <Divider />
                           <Box sx={{display : 'flex', justifyContent : 'space-between', mt : 2}}>
                             <Typography sx={{fontSize : '0.7rem'}} className='textSecondry'>
-                              Functional Website
+                              Functional App
                             </Typography>
                             <CheckCircle fontSize='1'/>
                           </Box>
@@ -285,7 +285,7 @@ const Services = () => {
                           </Box>
                         </Box>
                       </Grid>
-                      <Grid item lg={4}>
+                      <Grid item lg={4} md={4} sm={6} xs={12}>
                         <Box sx={{width : '100%', border : `1px solid ${theme.palette.primary.dark}`, p : 3}}>
                           <Typography sx={{fontSize : '3rem'}}>
                             350<span style={{fontSize : '1.5rem'}}>$</span>
@@ -296,7 +296,7 @@ const Services = () => {
                           <Divider />
                           <Box sx={{display : 'flex', justifyContent : 'space-between', mt : 2}}>
                             <Typography sx={{fontSize : '0.7rem'}} className='textSecondry'>
-                              Functional Website
+                              Functional App
                             </Typography>
                             <CheckCircle fontSize='1'/>
                           </Box>

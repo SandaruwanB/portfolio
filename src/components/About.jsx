@@ -48,12 +48,11 @@ const About = () => {
               </Typography>
               <Divider sx={{mt : 5, mb : 5}}/>
               <Box>
-                <Grid container>
+                <Grid container spacing={3}>
                   <Grid item md={6} sm={12} xs={12}>
-                    <Typography>sdashdasdh</Typography>
+
                   </Grid>
                   <Grid item md={6} sm={12} xs={12}>
-                    <Typography>dasjdajsdgjh</Typography>
                   </Grid>
                 </Grid>
               </Box>
