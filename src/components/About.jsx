@@ -29,7 +29,7 @@ const About = () => {
                 About Me
               </Typography>
               <Box sx={{mt : 6}}>
-                <img src='/bg.jpg' alt='bg' width={'100%'} height={500} style={{objectFit : 'cover'}}/>
+                <img src='/images/bg.jpeg' alt='bg' width={'100%'} height={500} style={{objectFit : 'cover'}}/>
               </Box>
               <Box sx={{mt : 3}}>
                 <Typography variant='h6' className='textMain' sx={{fontWeight : '700', letterSpacing : 1, fontSize : '1.6rem'}}>

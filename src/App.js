@@ -5,7 +5,7 @@ import { CssBaseline } from "@mui/material";
 import NotFound from './components/404'
 import Home from './components/Home'
 import About from './components/About'
-import ThemeIcon from './theme/ThemeIcon'
+import ThemeControl from './theme/ThemeControl'
 import Contact from './components/Contact'
 import Services from './components/Services'
 import Tech from "./components/Tech";
@@ -16,7 +16,7 @@ function App() {
         <CssBaseline />
         <Routes>
           <Route path="*" element={<NotFound />} />
-          <Route element={<ThemeIcon />}>
+          <Route element={<ThemeControl />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

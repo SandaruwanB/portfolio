@@ -47,7 +47,7 @@ body::-webkit-scrollbar{
 }
 
 .HomeProfile{
-    background: url('/public/profile.jpg');
+    background: url('/public/images/profile.jpeg');
     width: 280px;
     height: 280px;
     background-size: cover;

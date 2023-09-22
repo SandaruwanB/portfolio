@@ -6,7 +6,7 @@ import DarkTheme from './darkTheme'
 import LightTheme from './lightTheme'
 
 
-const ThemeIcon = () => {
+const ThemeControl = () => {
   const [themeMod, setThemeMod] = useState('light');
 
   useEffect(()=>{
@@ -38,4 +38,4 @@ const ThemeIcon = () => {
   )
 }
 
-export default ThemeIcon
+export default ThemeControl
