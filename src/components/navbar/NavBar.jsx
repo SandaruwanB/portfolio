@@ -110,7 +110,7 @@ const NavBar = (props) => {
           <Copyright fontSize='20'/> 2023 SANDARU
           </Typography>
           <Typography variant='body2' className='textSecondry' sx={{color : theme.components.MuiListItem}}>
-            Created by SandaruwanBandara
+            Created by <span style={{fontWeight : 'bold', letterSpacing : 1}}>SandaruwanBandara</span>
           </Typography>
         </Box>
       </Box>
