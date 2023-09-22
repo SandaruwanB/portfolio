@@ -41,7 +41,7 @@ const About = () => {
               </Box>
               <Divider sx={{mt : 5, mb : 5}}/>
               <Typography variant='body1' sx={{letterSpacing : 0.7, color : theme.components.MuiListItem}}>
-                Hello ! I'm Sandaruwan Bandara, a passionate self-taught full stack developer and a freelance software engineer from Sri Lanka. my passion for software lies with dreaming up ideas and making them come true with elegant interfaces. i take great care in the experience, architecture, and code quality of the things I build.
+                Hello ! I'm Sandaruwan Bandara, a passionate self-taught full stack developer and a freelance software engineer from Sri Lanka. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.
               </Typography>
               <Typography variant='body1' sx={{mt : 3, letterSpacing : 0.7, color : theme.components.MuiListItem}}>
               One of my specialties is taking an idea from scratch and creating a full-fledged platform. I go beyond to produce sites with a unique, outstanding, contemporary look-and-feel. With extensive knowledge of web mechanics, I’m able to optimize complex integrations to require little-to-no maintenance while running on their own for years.
