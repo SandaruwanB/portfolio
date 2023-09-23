@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {Box, CssBaseline, Container, useTheme, Typography, Grow, TextField, Button} from '@mui/material'
+import {Email} from '@mui/icons-material'
 import NavBar from './navbar/NavBar'
 
 
@@ -43,8 +44,19 @@ const Contact = () => {
                 </Box>
               </Container>
             </Grow>
-            <Box sx={{width : '100%', pt : 10, pb : 20, background : theme.palette.secondary.main}}>
-
+            <Box sx={{width : '100%', background : theme.palette.secondary.main}}>
+              <Container maxWidth="lg" sx={{width : {xl : '70%'}, pt : 10, pb : 10}}>
+                <Box>
+                  <Typography sx={{color : theme.components.MuiListItemText, fontSize : '1.2rem', letterSpacing : 1, fontWeight : 600}} className='textPrimary'>
+                    Contact Details
+                  </Typography>
+                  <Box sx={{mt : 5}}>
+                    <Box sx={{display : 'flex', alignItems : 'baseline'}}>
+                      <Email /> <Typography>hjasdajs</Typography>
+                    </Box>
+                  </Box> 
+                </Box>
+              </Container>
             </Box>
           </Box>
         </Box>
