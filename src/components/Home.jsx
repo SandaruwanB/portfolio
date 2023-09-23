@@ -34,10 +34,18 @@ const Home = () => {
                       I'm fullstack developer with 2+ years of experiences. I have create freatures that are the best suited for your web apps and android apps.I'm also develop desktop apps & APIs.
                     </Typography>
                     <Typography sx={{textAlign : {xs : 'center', sm : 'center', md : 'left'}, mt : 3}}>
-                      <IconButton sx={{cursor : 'pointer',}} onClick={()=>navigateTo('https://www.linkedin.com/in/sandaruwan-bandara/')}><LinkedIn/></IconButton>   
-                      <IconButton sx={{cursor : 'pointer', ml : 0.5}} onClick={()=>navigateTo('https://github.com/SandaruwanB')}><GitHub/></IconButton>
+                      <Grow in={true} style={{transformOrigin : '0 0 0'}} {...(true ? {timeout : 1000} : {})}>
+                        <IconButton sx={{cursor : 'pointer',}} onClick={()=>navigateTo('https://www.linkedin.com/in/sandaruwan-bandara/')}><LinkedIn/></IconButton> 
+                      </Grow>
+                      <Grow in={true} style={{transformOrigin : '0 0 0'}} {...(true ? {timeout : 2000} : {})}>
+                        <IconButton sx={{cursor : 'pointer', ml : 0.5}} onClick={()=>navigateTo('https://github.com/SandaruwanB')}><GitHub/></IconButton>
+                      </Grow>
+                      <Grow in={true} style={{transformOrigin : '0 0 0'}} {...(true ? {timeout : 3000} : {})}>
                       <IconButton sx={{cursor : 'pointer', ml : 0.5}} onClick={()=>navigateTo('https://www.facebook.com/profile.php?id=100094931564366&mibextid=ZbWKwL')}><Facebook/></IconButton>
-                      <IconButton sx={{cursor : 'pointer', ml : 0.5}} onClick={()=>navigateTo('https://wa.me/94761183372')}><WhatsApp/></IconButton>
+                      </Grow>
+                      <Grow in={true} style={{transformOrigin : '0 0 0'}} {...(true ? {timeout : 4000} : {})}>
+                        <IconButton sx={{cursor : 'pointer', ml : 0.5}} onClick={()=>navigateTo('https://wa.me/94761183372')}><WhatsApp/></IconButton>
+                      </Grow>     
                     </Typography>
                   </Box>
                 </Grid>
