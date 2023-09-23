@@ -1,6 +1,7 @@
 import { useTheme } from '@mui/material/styles'
 import React from 'react'
 import NavBar from './navbar/NavBar'
+import Footer from './navbar/Footer'
 import { Box, Container, CssBaseline, Typography, Divider, Grow, Grid, Button } from '@mui/material'
 
 const About = () => {
@@ -139,7 +140,8 @@ const About = () => {
               </Typography>
             </Container>
           </Box>
-        </Box>    
+          <Footer />  
+        </Box>  
       </Box>
     </Box>
   )

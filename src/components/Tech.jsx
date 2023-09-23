@@ -6,6 +6,7 @@ import { DiJava } from 'react-icons/di'
 import { BiLogoBootstrap, BiLogoCss3, BiLogoHtml5, BiLogoJavascript, BiLogoSass } from 'react-icons/bi'
 import { TbFileTypeXml } from 'react-icons/tb'
 import NavBar from './navbar/NavBar'
+import Footer from './navbar/Footer'
 
 const Tech = () => {
     const theme = useTheme();
@@ -218,6 +219,7 @@ const Tech = () => {
                         </Container>
                     </Grow>
                 </Box>
+                <Footer />
             </Box>
         </Box>
     </Box>

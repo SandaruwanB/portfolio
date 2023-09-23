@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {Box, CssBaseline, Container, useTheme, Typography, Grow, TextField, Button} from '@mui/material'
 import {Email} from '@mui/icons-material'
 import NavBar from './navbar/NavBar'
+import Footer from './navbar/Footer'
 
 
 const Contact = () => {
@@ -52,13 +53,14 @@ const Contact = () => {
                   </Typography>
                   <Box sx={{mt : 5}}>
                     <Box sx={{display : 'flex', alignItems : 'baseline'}}>
-                      <Email /> <Typography>hjasdajs</Typography>
+                    <Typography><Email /> hjasdajs</Typography>
                     </Box>
                   </Box> 
                 </Box>
               </Container>
             </Box>
           </Box>
+          <Footer />
         </Box>
       </Box>
     </Box>

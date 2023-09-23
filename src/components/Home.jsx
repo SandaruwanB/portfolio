@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, CssBaseline, Grid, Grow, IconButton, Typography, useTheme,} from '@mui/material'
-import { LinkedIn, GitHub, Facebook, WhatsApp } from '@mui/icons-material'
+import { LinkedIn, GitHub, Facebook, WhatsApp, Copyright } from '@mui/icons-material'
 import NavBar from './navbar/NavBar';
+import Footer from './navbar/Footer';
 
 const Home = () => {
   const theme = useTheme();
@@ -51,6 +52,7 @@ const Home = () => {
                 </Grid>
               </Grid>
             </Grow>
+            <Footer />
           </Box>
         </Box>
     </Box>

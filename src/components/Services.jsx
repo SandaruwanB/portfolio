@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, CssBaseline, Container, useTheme, Typography, Grow, Grid, IconButton, Divider, Button } from '@mui/material'
 import { CheckCircle, CheckCircleOutline } from '@mui/icons-material'
 import NavBar from './navbar/NavBar'
+import Footer from './navbar/Footer'
 
 
 const Services = () => {
@@ -372,6 +373,7 @@ const Services = () => {
                 </Box>
             </Container>
           </Box>
+          <Footer />
         </Box>
       </Box>
     </Box>
