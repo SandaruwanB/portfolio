@@ -1,9 +1,10 @@
 import React from 'react'
 import {Box, CssBaseline, Grow, Container, Typography, useTheme, Grid} from '@mui/material'
 import { FaLaravel, FaReact } from 'react-icons/fa'
-import { SiCplusplus, SiCsharp, SiDart, SiDjango, SiDotnet, SiElectron, SiExpo, SiFlutter, SiPhp, SiPython } from 'react-icons/si'
+import { SiCplusplus, SiCsharp, SiDart, SiDjango, SiDotnet, SiElectron, SiExpo, SiFirebase, SiFlutter, SiMongodb, SiMui, SiMysql, SiPhp, SiPython } from 'react-icons/si'
 import { DiJava } from 'react-icons/di'
-import { BiLogoJavascript } from 'react-icons/bi'
+import { BiLogoBootstrap, BiLogoCss3, BiLogoHtml5, BiLogoJavascript, BiLogoSass } from 'react-icons/bi'
+import { TbFileTypeXml } from 'react-icons/tb'
 import NavBar from './navbar/NavBar'
 
 const Tech = () => {
@@ -74,7 +75,49 @@ const Tech = () => {
             icon : <SiDart fontSize={30} />
         }
     ];
-    
+
+    const ui = [
+        {
+            name : 'HTML5',
+            icon : <BiLogoHtml5 fontSize={30} />
+        },
+        {
+            name : 'CSS',
+            icon : <BiLogoCss3 fontSize={30} />
+        },
+        {
+            name : 'XML',
+            icon : <TbFileTypeXml fontSize={30} />
+        },
+        {
+            name : 'SASS',
+            icon : <BiLogoSass fontSize={30} />
+        },
+        {
+            name : 'Bootstrap',
+            icon : <BiLogoBootstrap fontSize={30} />
+        },
+        {
+            name : 'MUI',
+            icon : <SiMui fontSize={30} />
+        }
+    ];
+
+    const db = [
+        {
+            name : 'MySQL',
+            icon : <SiMysql fontSize={30} />
+        },
+        {
+            name : 'MongoDB',
+            icon : <SiMongodb fontSize={30} />
+        },
+        {
+            name : 'Firebase',
+            icon : <SiFirebase fontSize={30} />
+        }
+    ]
+
 
     return (
     <Box>
@@ -121,6 +164,44 @@ const Tech = () => {
                                 </Typography>
                                 <Grid sx={{ mt :1}} spacing={1} container>
                                     {languages.map((item, index)=>(
+                                        <Grid item lg={3} xl={3} md={3} sm={4} xs={12} key={index} >
+                                            <Box sx={{border : `1px solid ${theme.palette.primary.dark}`, borderRadius : 1, display : 'flex', justifyContent : 'center', alignItems : 'center', flexDirection : 'column-reverse', p : 2}}>
+                                                <Box>
+                                                    <Typography sx={{color : theme.components.MuiListItem}}>{item.name}</Typography>
+                                                </Box>
+                                                <Box>
+                                                    {item.icon}
+                                                </Box>
+                                            </Box>
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                            </Box>
+                            <Box sx={{mt : 8}}>
+                                <Typography sx={{fontSize : '1.2rem', fontWeight : 600, letterSpacing : 1}} className='textPrimary'>
+                                    UI Design
+                                </Typography>
+                                <Grid sx={{ mt :1}} spacing={1} container>
+                                    {ui.map((item, index)=>(
+                                        <Grid item lg={3} xl={3} md={3} sm={4} xs={12} key={index} >
+                                            <Box sx={{border : `1px solid ${theme.palette.primary.dark}`, borderRadius : 1, display : 'flex', justifyContent : 'center', alignItems : 'center', flexDirection : 'column-reverse', p : 2}}>
+                                                <Box>
+                                                    <Typography sx={{color : theme.components.MuiListItem}}>{item.name}</Typography>
+                                                </Box>
+                                                <Box>
+                                                    {item.icon}
+                                                </Box>
+                                            </Box>
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                            </Box>
+                            <Box sx={{mt : 8}}>
+                                <Typography sx={{fontSize : '1.2rem', fontWeight : 600, letterSpacing : 1}} className='textPrimary'>
+                                    Database Design
+                                </Typography>
+                                <Grid sx={{ mt :1}} spacing={1} container>
+                                    {db.map((item, index)=>(
                                         <Grid item lg={3} xl={3} md={3} sm={4} xs={12} key={index} >
                                             <Box sx={{border : `1px solid ${theme.palette.primary.dark}`, borderRadius : 1, display : 'flex', justifyContent : 'center', alignItems : 'center', flexDirection : 'column-reverse', p : 2}}>
                                                 <Box>
