@@ -27,6 +27,7 @@ const ThemeControl = () => {
             backgroundColor : themeMod === 'light' ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.2)',
             borderRadius: 5,
             display : 'inline-block',
+            
           }}
         >
           <IconButton onClick={()=>setThemeMod(themeMod === 'light' ? 'dark' : 'light')} > 

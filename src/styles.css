@@ -26,9 +26,19 @@
     box-sizing: border-box;
 }
 
-body::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar{
+    width: 5px;
 }
+::-webkit-scrollbar-track{
+    background: #999;
+}
+::-webkit-scrollbar-thumb{
+    background: #555;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #111;
+}
+
 
 .textMain{
     font-family: 'Montserrat', sans-serif;
