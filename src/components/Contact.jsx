@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Box, CssBaseline, Container, useTheme, Typography, Grow, TextField, Button} from '@mui/material'
+import {Box, CssBaseline, Container, useTheme, Typography, Grow, TextField, Button, CircularProgress, Modal} from '@mui/material'
 import {Email} from '@mui/icons-material'
 import emailjs from '@emailjs/browser'
 import NavBar from './navbar/NavBar'
@@ -12,6 +12,10 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [heading, setHeading] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
 
   const sendMail = async ()=>{
     const mailDetails = {
@@ -21,7 +25,36 @@ const Contact = () => {
       subject : subject,
     }
 
-    await emailjs.send("service_w513pof", "template_e21cnmq", mailDetails, "Qp8qYJQ1cXC0C0map").then((res)=>console.log(res.status));
+    if(name === "" || email === "" || subject === "" || message === ""){
+      setHeading("Alert");
+      setAlertMessage("Oopzz! you missed some fields. please fill all before submit.");
+      setModal(true);
+    }
+    else{
+      setLoading(true);
+      await emailjs.send("service_w513pof", "template_e21cnmq", mailDetails, "Qp8qYJQ1cXC0C0map").then((res)=>{
+        setLoading(false)
+        setHeading("Success");
+        setAlertMessage("Dear " + name + ", your message successfully sended. please be in touch with your email. Thanks for messaging to Me.");
+        setModal(true);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      });
+    }
+  }
+
+  const modalBoxStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    maxWidth : 350,
+    p: 4,
   }
 
   return (
@@ -49,8 +82,23 @@ const Contact = () => {
                   <TextField label={'Email Address'} sx={{width : '100%', mt : 4}} size='small' onChange={(e)=>setEmail(e.target.value)} value={email}/>
                   <TextField variant='outlined' label={'Subject'} sx={{width : '100%', mt : 4}} size='small' onChange={(e)=>setSubject(e.target.value)} value={subject}/>
                   <TextField variant='outlined' label={'Message'} multiline rows={5} maxRows={7} sx={{width : '100%', mt : 4}} onChange={(e)=>setMessage(e.target.value)} value={message}/>
-                  <Button variant='contained' sx={{mt : 4, width : 130, background : theme.components.MuiButton, color : theme.components.MuiFormHelperText}} onClick={()=>sendMail()}>Send</Button>
+                  <Button variant='contained' sx={{mt : 4, width : 130, background : theme.components.MuiButton, color : theme.components.MuiFormHelperText}} onClick={()=>sendMail()}>{ loading ? <CircularProgress size={25}/> : 'Send' }</Button>
                 </Box>
+                <Modal
+                  open={modal}
+                  onClose={()=>setModal(false)}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={modalBoxStyle}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2" className='textSecondry'>
+                      {heading}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2, fontSize : 15 }} className='textPrimary'>
+                      {alertMessage}
+                    </Typography>
+                  </Box>
+                </Modal>
               </Container>
             </Grow>
             <Box sx={{width : '100%', background : theme.palette.secondary.main}}>
@@ -71,6 +119,7 @@ const Contact = () => {
           <Footer />
         </Box>
       </Box>
+
     </Box>
   )
 }
