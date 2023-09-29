@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Box, CssBaseline, Container, useTheme, Typography, Grow, TextField, Button} from '@mui/material'
 import {Email} from '@mui/icons-material'
+import emailjs from '@emailjs/browser'
 import NavBar from './navbar/NavBar'
 import Footer from './navbar/Footer'
 
@@ -12,8 +13,15 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendMail = ()=>{
-    alert(name + " " + email + " " + subject + " " + message);
+  const sendMail = async ()=>{
+    const mailDetails = {
+      from_name : name,
+      sendermail : email,
+      message : message,
+      subject : subject,
+    }
+
+    await emailjs.send("service_w513pof", "template_e21cnmq", mailDetails, "Qp8qYJQ1cXC0C0map").then((res)=>console.log(res.status));
   }
 
   return (
